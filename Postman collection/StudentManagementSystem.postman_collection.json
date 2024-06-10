@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "a7ac9649-a7e6-445f-a8f0-2029b1c2f8fc",
+		"name": "StudentManagementSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27847522"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mohamed@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/StudentManagementSystem/rest/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"StudentManagementSystem",
+						"rest",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllCourses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtQG0uY29tIiwiZXhwIjoxOTMzNzg3NDIxfQ.xZIQWy5JYL5tYxjijqzxZDKjeOQfXgqLuhLwPvfkKAE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/StudentManagementSystem/course/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"StudentManagementSystem",
+						"course",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerToCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb2hhbWVkQGdtYWlsLmNvbSIsImV4cCI6MTcxODAwODA0MX0._YCoLXD5_bhLrgP8rDJH5VzPNjk3vQ25S1L98YiaFSA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/StudentManagementSystem/course/registerToCourse?courseId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"StudentManagementSystem",
+						"course",
+						"registerToCourse"
+					],
+					"query": [
+						{
+							"key": "courseId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancelRegistrationToCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb2hhbWVkQGdtYWlsLmNvbSIsImV4cCI6MTcxODAxMTIzOH0.arIawj3ib8N5LluQS3Van55Jm5TIePvaE9E8FzKLaTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/StudentManagementSystem/course/cancelRegistrationToCourse?courseId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"StudentManagementSystem",
+						"course",
+						"cancelRegistrationToCourse"
+					],
+					"query": [
+						{
+							"key": "courseId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "downloadCourseSchedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtb2hhbWVkQGdtYWlsLmNvbSIsImV4cCI6MTcxODA1MTQ0MH0._2meTWyv_WgwkkLrPjbqhfZzfU6wQ1NoerFWIAoMOaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/StudentManagementSystem/course/downloadSchedule?courseId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"StudentManagementSystem",
+						"course",
+						"downloadSchedule"
+					],
+					"query": [
+						{
+							"key": "courseId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
